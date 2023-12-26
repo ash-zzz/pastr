@@ -16,7 +16,6 @@ export class TextService {
     if (!path) {
       return null;
     }
-    console.log('💾 deleting cached', path);
     this.cacheManager.del(path);
     return this.textModel.findOneAndUpdate(
       { path },
@@ -31,9 +30,7 @@ export class TextService {
 
   async get(path: string): Promise<Text> {
     const cached = await this.cacheManager.get<string>(path);
-    console.log('💾 checking', path, 'cache: ', cached);
     if (cached) {
-      console.log('💾 returning cached', path, ':', cached);
       return { path, text: cached };
     }
     return (await this.textModel.findOne({ path })) || { path, text: '' };
