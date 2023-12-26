@@ -1,0 +1,21 @@
+{
+  "name": "pastr",
+  "version": "1.0.0",
+  "description": "Lightweight auto-save paste bin",
+  "main": "index.js",
+  "scripts": {
+    "build:backend": "cd pastr-backend && pnpm run build",
+    "build:frontend": "cd pastr-frontend && pnpm run build",
+    "build": "pnpm run build:backend && pnpm run build:frontend",
+    "start": "cd pastr-backend && pnpm run start:prod",
+    "dev:backend": "cd pastr-backend && pnpm run start:dev",
+    "dev:frontend": "cd pastr-frontend && pnpm run dev",
+    "dev": "concurrently \"pnpm:dev:backend\" \"pnpm:dev:frontend\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
