@@ -19,9 +19,8 @@ export class TextGateway implements OnGatewayConnection, OnGatewayDisconnect {
   handleConnection(socket: Socket): void {
     if (socket.handshake.query.path) {
       socket.join(socket.handshake.query.path);
-      console.log('🏠', socket.id, 'joined', socket.handshake.query.path);
+      console.log('🟢', socket.id, 'joined', socket.handshake.query.path);
     }
-    console.log('🟢', socket.id, 'connected');
   }
 
   handleDisconnect(socket: Socket) {
