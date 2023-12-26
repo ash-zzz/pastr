@@ -42,12 +42,15 @@ function App() {
 
   useEffect(() => {
     if (dirty) {
-      const index = value
+      const changeIndex = value
         .split("")
         .findIndex((char, i) => char !== previousValue[i]);
+      if (changeIndex === -1) {
+        return;
+      }
       let newCursor = cursor;
-      if (index < cursor) {
-        newCursor++;
+      if (changeIndex < cursor) {
+        newCursor += value.length - previousValue.length;
       }
       ref.current?.setSelectionRange(newCursor, newCursor);
       setDirty(false);
