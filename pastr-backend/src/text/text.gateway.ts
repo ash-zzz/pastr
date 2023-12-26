@@ -43,7 +43,6 @@ export class TextGateway implements OnGatewayConnection, OnGatewayDisconnect {
       if (room === socket.id) {
         return;
       }
-      console.log('💾 caching', room, ':', body);
       this.cacheManager.set(room, body);
     });
     socket.to([...socket.rooms]).emit('dataUpdated', body);
