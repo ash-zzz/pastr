@@ -4,13 +4,16 @@
   "description": "Lightweight auto-save paste bin",
   "main": "index.js",
   "scripts": {
-    "build:backend": "cd pastr-backend && pnpm run build",
-    "build:frontend": "cd pastr-frontend && pnpm run build",
-    "build": "pnpm run build:backend && pnpm run build:frontend",
-    "start": "cd pastr-backend && pnpm run start:prod",
-    "dev:backend": "cd pastr-backend && pnpm run start:dev",
-    "dev:frontend": "cd pastr-frontend && pnpm run dev",
-    "dev": "concurrently \"pnpm:dev:backend\" \"pnpm:dev:frontend\""
+    "build:backend": "cd pastr-backend && npm run build",
+    "build:frontend": "cd pastr-frontend && npm run build",
+    "install:backend": "cd pastr-backend && npm i",
+    "install:frontend": "cd pastr-frontend && npm i",
+    "install": "npm run install:backend && npm run install:frontend",
+    "build": "npm run install && npm run build:backend && npm run build:frontend",
+    "start": "cd pastr-backend && npm run start:prod",
+    "dev:backend": "cd pastr-backend && npm run start:dev",
+    "dev:frontend": "cd pastr-frontend && npm run dev",
+    "dev": "concurrently \"npm:dev:backend\" \"npm:dev:frontend\""
   },
   "keywords": [],
   "author": "",
