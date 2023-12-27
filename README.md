@@ -22,6 +22,11 @@ Welcome to our Realtime Collaborative Text Editor! This web application allows u
 
 5. **Auto-save:**
    - Your document is auto-saved on every keystroke, ensuring that your work is continuously backed up.
+  
+## Todo
+- Set up cron job to delete documents after X days of last update
+- Implement locking documents to prevent further edits until deleted?
+- User IDs for collaboration?
 
 ## Features
 
