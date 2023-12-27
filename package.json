@@ -9,7 +9,7 @@
     "install:backend": "cd pastr-backend && pnpm i",
     "install:frontend": "cd pastr-frontend && pnpm i",
     "install": "pnpm run install:backend && pnpm run install:frontend",
-    "build": "pnpm run install && pnpm run build:backend && pnpm run build:frontend",
+    "build": "pnpm run build:backend && pnpm run build:frontend",
     "start": "cd pastr-backend && pnpm run start:prod",
     "dev:backend": "cd pastr-backend && pnpm run start:dev",
     "dev:frontend": "cd pastr-frontend && pnpm run dev",
