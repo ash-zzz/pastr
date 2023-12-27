@@ -58,7 +58,7 @@ Welcome to our Realtime Collaborative Text Editor! This web application allows u
 
 ## Contributing
 
-If you would like to contribute to the development of this project, please follow our [Contribution Guidelines](CONTRIBUTING.md). (WIP)
+If you would like to contribute to the development of this project, please follow our [Contribution Guidelines](CONTRIBUTING.md). (**WIP**)
 
 ## Issues and Bugs
 
