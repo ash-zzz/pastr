@@ -66,6 +66,6 @@ If you encounter any issues or find bugs, please report them on our [Issue Track
 
 ## License
 
-This Realtime Collaborative Text Editor is licensed under the [MIT License](LICENSE.md).
+Pastr is licensed under the [Apache 2.0 License](LICENSE.md).
 
 Happy Collaborating! 🚀
